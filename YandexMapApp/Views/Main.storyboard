@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9xc-36-oWd">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="XGJ-xr-rie">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="9xc-36-oWd" customClass="MainViewController" customModule="YandexMapApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WSX-kb-z71">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vz-Ka-FDa" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cge-KB-gfW">
+                                <rect key="frame" x="8" y="492" width="359" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4IK-Nk-3bJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Add the first point..."/>
+                                <connections>
+                                    <segue destination="RA3-ZM-SNy" kind="presentation" identifier="fromFirstPoint" id="Ci8-OG-m4y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMf-EX-cQJ">
+                                <rect key="frame" x="8" y="557" width="359" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="R3k-II-BKb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Add the second point..."/>
+                                <connections>
+                                    <segue destination="RA3-ZM-SNy" kind="presentation" identifier="fromSecondPoint" id="sVs-5D-UFh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OMf-EX-cQJ" firstAttribute="top" secondItem="cge-KB-gfW" secondAttribute="bottom" constant="5" id="62c-dN-nl9"/>
+                            <constraint firstItem="OMf-EX-cQJ" firstAttribute="leading" secondItem="gla-on-PS3" secondAttribute="leading" constant="8" id="IHp-dy-PmQ"/>
+                            <constraint firstItem="6Vz-Ka-FDa" firstAttribute="top" secondItem="gla-on-PS3" secondAttribute="top" id="PEv-FP-7si"/>
+                            <constraint firstItem="cge-KB-gfW" firstAttribute="leading" secondItem="gla-on-PS3" secondAttribute="leading" constant="8" id="V0i-4v-dzo"/>
+                            <constraint firstItem="gla-on-PS3" firstAttribute="trailing" secondItem="OMf-EX-cQJ" secondAttribute="trailing" constant="8" id="b8F-Rt-OgQ"/>
+                            <constraint firstItem="gla-on-PS3" firstAttribute="bottom" secondItem="OMf-EX-cQJ" secondAttribute="bottom" constant="50" id="jvS-yh-3Qe"/>
+                            <constraint firstItem="6Vz-Ka-FDa" firstAttribute="leading" secondItem="gla-on-PS3" secondAttribute="leading" id="lyj-us-DVh"/>
+                            <constraint firstItem="6Vz-Ka-FDa" firstAttribute="bottom" secondItem="gla-on-PS3" secondAttribute="bottom" id="rAv-ri-18G"/>
+                            <constraint firstItem="gla-on-PS3" firstAttribute="trailing" secondItem="cge-KB-gfW" secondAttribute="trailing" constant="8" id="uST-Ck-eQx"/>
+                            <constraint firstItem="6Vz-Ka-FDa" firstAttribute="trailing" secondItem="gla-on-PS3" secondAttribute="trailing" id="vO0-h5-NUp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gla-on-PS3"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstPointButton" destination="cge-KB-gfW" id="xGm-lw-BhS"/>
+                        <outlet property="mapView" destination="6Vz-Ka-FDa" id="kxJ-Vj-cGS"/>
+                        <outlet property="secondPointButton" destination="OMf-EX-cQJ" id="V67-gM-bX2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eP2-W8-U8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="155.17241379310346"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="wBB-9l-MlE">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="RA3-ZM-SNy" customClass="MapViewController" customModule="YandexMapApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8kL-gV-ZUE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEw-nL-P8G" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="pi3-Kp-PaF">
+                                <rect key="frame" x="166.5" y="292.5" width="42" height="42"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-Ta-noc">
+                                <rect key="frame" x="8" y="126" width="359" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="weg-oh-gfd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb7-nd-OUc">
+                                <rect key="frame" x="8" y="522" width="359" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NHH-GZ-9O3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Add point"/>
+                                <connections>
+                                    <action selector="addPointButton:" destination="RA3-ZM-SNy" eventType="touchUpInside" id="4cq-Fk-0FC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XEX-Ta-noc" firstAttribute="leading" secondItem="lmI-3F-Ws9" secondAttribute="leading" constant="8" id="A5P-Ep-X0L"/>
+                            <constraint firstItem="gb7-nd-OUc" firstAttribute="leading" secondItem="lmI-3F-Ws9" secondAttribute="leading" constant="8" id="FiS-Ax-K8m"/>
+                            <constraint firstItem="pi3-Kp-PaF" firstAttribute="centerX" secondItem="8kL-gV-ZUE" secondAttribute="centerX" id="GF1-fq-G0a"/>
+                            <constraint firstItem="IEw-nL-P8G" firstAttribute="leading" secondItem="lmI-3F-Ws9" secondAttribute="leading" id="HA1-6y-lcB"/>
+                            <constraint firstItem="lmI-3F-Ws9" firstAttribute="bottom" secondItem="gb7-nd-OUc" secondAttribute="bottom" constant="85" id="KfA-83-xnI"/>
+                            <constraint firstItem="XEX-Ta-noc" firstAttribute="top" secondItem="lmI-3F-Ws9" secondAttribute="top" constant="126" id="Mls-tL-9Rn"/>
+                            <constraint firstItem="lmI-3F-Ws9" firstAttribute="trailing" secondItem="gb7-nd-OUc" secondAttribute="trailing" constant="8" id="Ud7-CS-rlG"/>
+                            <constraint firstItem="lmI-3F-Ws9" firstAttribute="bottom" secondItem="IEw-nL-P8G" secondAttribute="bottom" id="asR-jv-xTJ"/>
+                            <constraint firstItem="IEw-nL-P8G" firstAttribute="top" secondItem="lmI-3F-Ws9" secondAttribute="top" id="duZ-F8-5va"/>
+                            <constraint firstItem="IEw-nL-P8G" firstAttribute="trailing" secondItem="lmI-3F-Ws9" secondAttribute="trailing" id="icD-0O-411"/>
+                            <constraint firstItem="pi3-Kp-PaF" firstAttribute="centerY" secondItem="8kL-gV-ZUE" secondAttribute="centerY" constant="-20" id="qMd-Lw-edH"/>
+                            <constraint firstItem="lmI-3F-Ws9" firstAttribute="trailing" secondItem="XEX-Ta-noc" secondAttribute="trailing" constant="8" id="vJk-qF-CLW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lmI-3F-Ws9"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="IEw-nL-P8G" id="rEK-1d-b1X"/>
+                        <outlet property="pointLabel" destination="XEX-Ta-noc" id="EF5-LJ-69o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOt-MQ-HMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720.79999999999995" y="154.27286356821591"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pin" width="42" height="42"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ci8-OG-m4y"/>
+    </inferredMetricsTieBreakers>
+</document>
