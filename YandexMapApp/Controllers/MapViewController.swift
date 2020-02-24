@@ -18,7 +18,12 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCamera()
         mapView.mapWindow.map.addCameraListener(with: self)
+    }
+    
+    private func setCamera() {
+        mapView.mapWindow.map.move(with: YMKCameraPosition(target: YMKPoint(latitude: 51.53285689487582, longitude: 71.50056675590363), zoom: 5.8, azimuth: 0, tilt: 0), animationType: YMKAnimation(type: .smooth, duration: 1.5), cameraCallback: nil)
     }
     
     @IBAction func addPointButton(_ sender: UIButton) {
@@ -31,8 +36,10 @@ class MapViewController: UIViewController {
 extension MapViewController: YMKMapCameraListener {
     func onCameraPositionChanged(with map: YMKMap, cameraPosition: YMKCameraPosition, cameraUpdateSource: YMKCameraUpdateSource, finished: Bool) {
         if  finished {
+
             let latitude = cameraPosition.target.latitude
             let longitude = cameraPosition.target.longitude
+            print("\(latitude)   \(longitude)   \(cameraPosition.zoom)")
             GeocoderMapService.mapOpen(latitude: latitude, longitude: longitude) { (streetName, buildName) in
                 if streetName != nil && buildName != nil {
                     self.pointLabel.text = "\(streetName!) \(buildName!)"

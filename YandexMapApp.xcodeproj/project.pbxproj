@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6389082535BA39872A9ED497 /* Pods_YandexMapApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87268D626463845E99EDE19A /* Pods_YandexMapApp.framework */; };
+		D18AB3E72403DDE000851233 /* YandexCameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AB3E62403DDE000851233 /* YandexCameraService.swift */; };
+		D18AB3E92403DE2700851233 /* YandexRouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AB3E82403DE2700851233 /* YandexRouteService.swift */; };
+		D18AB3EB2403DED100851233 /* YandexPlaceMarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AB3EA2403DED100851233 /* YandexPlaceMarkService.swift */; };
+		D18AB3ED2403FBD600851233 /* YandexGeocoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AB3EC2403FBD600851233 /* YandexGeocoderService.swift */; };
 		D1B5FBFE240385E600634D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FBFD240385E600634D21 /* AppDelegate.swift */; };
 		D1B5FC07240385E700634D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B5FC06240385E700634D21 /* Assets.xcassets */; };
 		D1B5FC1A2403883A00634D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B5FC192403883A00634D21 /* Main.storyboard */; };
@@ -16,12 +20,15 @@
 		D1B5FC20240388AA00634D21 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FC1F240388AA00634D21 /* MapViewController.swift */; };
 		D1B5FC232403928400634D21 /* MapViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FC222403928400634D21 /* MapViewControllerDelegate.swift */; };
 		D1B5FC25240394C900634D21 /* GeocoderMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FC24240394C900634D21 /* GeocoderMapService.swift */; };
-		D1B5FC292403A62D00634D21 /* YandexMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FC282403A62D00634D21 /* YandexMapService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B7756625653C7AA83B3BC94 /* Pods-YandexMapApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMapApp.debug.xcconfig"; path = "Target Support Files/Pods-YandexMapApp/Pods-YandexMapApp.debug.xcconfig"; sourceTree = "<group>"; };
 		87268D626463845E99EDE19A /* Pods_YandexMapApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YandexMapApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D18AB3E62403DDE000851233 /* YandexCameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexCameraService.swift; sourceTree = "<group>"; };
+		D18AB3E82403DE2700851233 /* YandexRouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexRouteService.swift; sourceTree = "<group>"; };
+		D18AB3EA2403DED100851233 /* YandexPlaceMarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexPlaceMarkService.swift; sourceTree = "<group>"; };
+		D18AB3EC2403FBD600851233 /* YandexGeocoderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexGeocoderService.swift; sourceTree = "<group>"; };
 		D1B5FBFA240385E600634D21 /* YandexMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B5FBFD240385E600634D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1B5FC06240385E700634D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,7 +39,6 @@
 		D1B5FC1F240388AA00634D21 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D1B5FC222403928400634D21 /* MapViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerDelegate.swift; sourceTree = "<group>"; };
 		D1B5FC24240394C900634D21 /* GeocoderMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderMapService.swift; sourceTree = "<group>"; };
-		D1B5FC282403A62D00634D21 /* YandexMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexMapService.swift; sourceTree = "<group>"; };
 		EECB02659BAF86A3EFBFF5A0 /* Pods-YandexMapApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMapApp.release.xcconfig"; path = "Target Support Files/Pods-YandexMapApp/Pods-YandexMapApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				D1B5FC24240394C900634D21 /* GeocoderMapService.swift */,
-				D1B5FC282403A62D00634D21 /* YandexMapService.swift */,
+				D18AB3E62403DDE000851233 /* YandexCameraService.swift */,
+				D18AB3E82403DE2700851233 /* YandexRouteService.swift */,
+				D18AB3EA2403DED100851233 /* YandexPlaceMarkService.swift */,
+				D18AB3EC2403FBD600851233 /* YandexGeocoderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -283,8 +292,11 @@
 				D1B5FC232403928400634D21 /* MapViewControllerDelegate.swift in Sources */,
 				D1B5FC1E2403889B00634D21 /* MainViewController.swift in Sources */,
 				D1B5FBFE240385E600634D21 /* AppDelegate.swift in Sources */,
+				D18AB3ED2403FBD600851233 /* YandexGeocoderService.swift in Sources */,
+				D18AB3E92403DE2700851233 /* YandexRouteService.swift in Sources */,
 				D1B5FC20240388AA00634D21 /* MapViewController.swift in Sources */,
-				D1B5FC292403A62D00634D21 /* YandexMapService.swift in Sources */,
+				D18AB3EB2403DED100851233 /* YandexPlaceMarkService.swift in Sources */,
+				D18AB3E72403DDE000851233 /* YandexCameraService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
