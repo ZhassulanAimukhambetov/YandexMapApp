@@ -36,18 +36,8 @@ class MapViewController: UIViewController {
 extension MapViewController: YMKMapCameraListener {
     func onCameraPositionChanged(with map: YMKMap, cameraPosition: YMKCameraPosition, cameraUpdateSource: YMKCameraUpdateSource, finished: Bool) {
         if  finished {
-
-            let latitude = cameraPosition.target.latitude
-            let longitude = cameraPosition.target.longitude
-            print("\(latitude)   \(longitude)   \(cameraPosition.zoom)")
-            GeocoderMapService.mapOpen(latitude: latitude, longitude: longitude) { (streetName, buildName) in
-                if streetName != nil && buildName != nil {
-                    self.pointLabel.text = "\(streetName!) \(buildName!)"
-                } else if streetName != nil {
-                    self.pointLabel.text = streetName!
-                } else {
-                    self.pointLabel.text = "unknown"
-                }
+            YandexGeocoderService.search(point: cameraPosition.target) { (title) in
+                self.pointLabel.text = title
             }
         }
     }

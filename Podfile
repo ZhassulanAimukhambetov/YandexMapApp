@@ -7,6 +7,7 @@ target 'YandexMapApp' do
 
   # Pods for YandexMapApp
   pod ‘YandexMapKit’, ’3.4’ 
-  pod ‘YandexMapKitDirections’, ’3.4’ 
+  pod ‘YandexMapKitDirections’, ’3.4’
+  pod ‘YandexMapKitSearch’, ’3.4’
 
 end

@@ -19,7 +19,6 @@
 		D1B5FC1E2403889B00634D21 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FC1D2403889B00634D21 /* MainViewController.swift */; };
 		D1B5FC20240388AA00634D21 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FC1F240388AA00634D21 /* MapViewController.swift */; };
 		D1B5FC232403928400634D21 /* MapViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FC222403928400634D21 /* MapViewControllerDelegate.swift */; };
-		D1B5FC25240394C900634D21 /* GeocoderMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B5FC24240394C900634D21 /* GeocoderMapService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +37,6 @@
 		D1B5FC1D2403889B00634D21 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D1B5FC1F240388AA00634D21 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D1B5FC222403928400634D21 /* MapViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerDelegate.swift; sourceTree = "<group>"; };
-		D1B5FC24240394C900634D21 /* GeocoderMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderMapService.swift; sourceTree = "<group>"; };
 		EECB02659BAF86A3EFBFF5A0 /* Pods-YandexMapApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMapApp.release.xcconfig"; path = "Target Support Files/Pods-YandexMapApp/Pods-YandexMapApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +130,6 @@
 		D1B5FC172403871800634D21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D1B5FC24240394C900634D21 /* GeocoderMapService.swift */,
 				D18AB3E62403DDE000851233 /* YandexCameraService.swift */,
 				D18AB3E82403DE2700851233 /* YandexRouteService.swift */,
 				D18AB3EA2403DED100851233 /* YandexPlaceMarkService.swift */,
@@ -288,7 +285,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1B5FC25240394C900634D21 /* GeocoderMapService.swift in Sources */,
 				D1B5FC232403928400634D21 /* MapViewControllerDelegate.swift in Sources */,
 				D1B5FC1E2403889B00634D21 /* MainViewController.swift in Sources */,
 				D1B5FBFE240385E600634D21 /* AppDelegate.swift in Sources */,
